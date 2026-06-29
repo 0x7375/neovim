@@ -8101,7 +8101,7 @@ local options = {
       abbreviation = 'sloc',
       cb = 'did_set_showcmdloc',
       defaults = 'last',
-      values = { 'last', 'statusline', 'tabline' },
+      values = { 'last', 'statusline', 'tabline', 'winbar' },
       desc = [=[
         This option can be used to display the (partially) entered command in
         another location.  Possible values are:

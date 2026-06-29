@@ -2063,6 +2063,15 @@ static void display_showcmd(void)
     }
     return;
   }
+  if (*p_sloc == 'w') {
+    if (showcmd_is_clear) {
+      curwin->w_redr_status = true;
+    } else {
+      win_redr_winbar(curwin);
+      setcursor();  // put cursor back where it belongs
+    }
+    return;
+  }
   if (*p_sloc == 't') {
     if (showcmd_is_clear) {
       redraw_tabline = true;
